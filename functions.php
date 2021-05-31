@@ -1,0 +1,12 @@
+<?php 
+// add dynamically styling and javascript scrips to page
+function add_theme_scripts(){
+    // styling css
+    wp_enqueue_style('styling1.css', get_stylesheet_directory_uri() . './css/styling1.css',array(), '1.0','all');
+    //add javascript file
+    wp_enqueue_script('script_one.js', get_template_directory_uri() . './js/script_one.js',array(),1.0,true);
+}
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+
+?>
