@@ -1,3 +1,88 @@
-body {
-  background-color: bisque;
+/* main layout */
+.wrapper {
+  /* background-color: rgb(168, 165, 165); */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: min-max(100px, 500px);
+  font-size: 16px;
+}
+/* @@@@@@@@@@@ header @@@@@@@@@@@@@@@@@@@@@ */
+.header {
+  background-color: white;
+  grid-column: 1/13;
+  box-shadow: 0px 0px 10px 10px rgb(224, 223, 223);
+}
+.brand_name {
+  grid-column: 1/13;
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+  padding: 2%;
+}
+.sub_name {
+  grid-column: 1/13;
+  font-size: 2em;
+  text-align: center;
+}
+.menu {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.menu_items {
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-color: rgb(234, 234, 240);
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.menu li {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline;
+  padding: 5px 20px 5px 20px;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+.menu a:hover {
+  color: gold;
+  /* background: linear-gradient(217deg, rgba(255, 215, 0, 0.5) 50%, white 80.71%); */
+}
+.menu ul li a {
+  padding: 5px 20px 5px 20px;
+}
+.menu ul li a:hover {
+  border: 2px solid gold;
+  border-left: 5px solid gold;
+  /* border: 2px solid linear-gradient(to right, red, purple); */
+}
+/* @@@@@@@@@@@@ body @@@@@@@@@@@@@@@@@@@@@ */
+.body {
+  background-color: rgb(185, 182, 182);
+  grid-column: 1/13;
+  min-height: 500px;
+  margin-top: 3%;
+}
+.footer {
+  color: white;
+  grid-column: 1/13;
+  background-color: rgb(53, 51, 52);
+}
+.footer_wrapper {
+  display: grid;
+  text-align: center;
+  color: gold;
+  font-size: 1.3em;
+}
+.footer_top {
+  grid-column: 1/13;
+}
+.footer_socialmedia {
+  grid-column: 1/13;
+}
+.footer_bottom {
+  grid-column: 1/13;
 }

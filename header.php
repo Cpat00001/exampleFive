@@ -10,5 +10,8 @@
     </head>
     <body <?php body_class('wlasna_classa');?>>
        
-        
-    <h1>Header</h1>
+    <div class="brand_name">Daga Ltd</div>
+    <div class="sub_name">English Tutorials</div>
+    <div class="menu_items">
+        <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
+    </div>

@@ -8,5 +8,17 @@ function add_theme_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
+// register menu
+function register_my_menus(){
+    register_nav_menus(
+        array(
+            'header-menu' => _('Header Menu'),
+            'menu_class' => 'menu_class_xxx',
+
+        )
+        );
+}
+add_action('init','register_my_menus');
+
 
 ?>
