@@ -3,7 +3,7 @@
         <?php get_header(); ?>
     </div>
     <div class="body">
-        <h1>Body</h1>
+        <?php get_template_part('partials/front_page_grid') ?>
     </div>
     <div class="footer">
         <?php get_footer(); ?>
