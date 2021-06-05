@@ -75,6 +75,23 @@
   grid-column: 1/13;
   grid-row: 1;
 }
+/* @@@@@@@@ front-page/home-page first row grid post with posts   @@@@@@@@@@@@@@@@@@@@@ */
+.first_row_grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.first_row_grid_post {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.first_row_grid_post_title {
+  margin-top: 5%;
+  font-weight: bold;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 .body_frontpage_second_row {
   /* background-color: rgb(155, 156, 160); */
   grid-column: 1/13;
@@ -94,6 +111,7 @@
 li {
   color: gold;
 }
+
 .footer {
   color: white;
   grid-column: 1/13;
@@ -164,6 +182,11 @@ li {
   max-width: 100px;
   float: right;
   text-align: center;
+}
+/* Blog Page */
+.body_subgrid_first_row a {
+  text-decoration: none;
+  color: gold;
 }
 
 /* responsive mobile */
