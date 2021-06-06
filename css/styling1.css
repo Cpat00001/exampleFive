@@ -78,25 +78,53 @@
 /* @@@@@@@@ front-page/home-page first row grid post with posts   @@@@@@@@@@@@@@@@@@@@@ */
 .first_row_grid {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1vw;
 }
 .first_row_grid_post {
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   padding: 20px;
   font-size: 20px;
   text-align: center;
+  grid-column: span 3;
 }
 .first_row_grid_post_title {
   margin-top: 5%;
   font-weight: bold;
 }
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.first_row_grid_post_thumbnail img {
+  width: 100%;
+  height: auto;
+}
+/* @@@@@@@@@@@@ front-page second row  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 .body_frontpage_second_row {
   /* background-color: rgb(155, 156, 160); */
   grid-column: 1/13;
   grid-row: 2;
+  border-top: 1px solid black;
+  border-color: rgb(234, 234, 240);
+  margin-top: 1%;
 }
+.second-row-grid {
+  display: grid;
+  grid-column: 1/13;
+  background-color: bisque;
+}
+.second-row-grid-post-image {
+  grid-column: 1/4;
+  background-color: rgb(194, 134, 61);
+  border: 1px solid-black;
+  padding: 10px;
+}
+.second-row-grid-post-title-button {
+  grid-column: 5/8;
+  background-color: rgb(79, 98, 160);
+  border: 1px solid-black;
+  padding: 10px;
+}
+
+/*  @@@@@@@@@@@@@@@@ front-page third row @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 .body_frontpage_third_row {
   /* background-color: rgb(170, 110, 160); */
   grid-column: 1/13;
@@ -235,6 +263,14 @@ li {
     color: white;
     width: 80%;
     height: 70%;
+  }
+  .first_row_grid_post {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    grid-column: span 12;
   }
 }
 /* small devices -> mobile */

@@ -21,11 +21,12 @@
 
                         <div class="first_row_grid_post">
                             <div class="first_row_grid_post_thumbnail">
-                                <?php
+                            <?php
                                     if(has_post_thumbnail()){
                                         the_post_thumbnail('post_image');
                                     }
                                 ?>
+                                
                             </div>
                             <div class="first_row_grid_post_title">
                                 <?php the_title(); ?>
