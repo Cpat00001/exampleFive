@@ -23,7 +23,7 @@ add_theme_support('post-thumbnails');
 function images_size(){
     add_image_size('page_image',1000 , 7500 );
     add_image_size('post_image', 300, 200 , true);
-    add_image_size('bigger_post_image', 500 , 300);
+    add_image_size('bigger_post_image', 400 , 300);
 }
 add_action('after_setup_theme','images_size');
 

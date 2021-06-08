@@ -28,11 +28,14 @@ if($query_ciekawostki->have_posts()){
         ?>
         </div>
         <div class="second-row-grid-post-title-button">
-            <button style=" padding:20px;font-size:20px;background-color:white;
-                            border:1px solid black;border-radius:1%;
-                            text-transform:uppercase;">Read More</button>
-            <h1><?php the_title() ?></h1>
+            <div class="front-page-row-second-btn-title">
+                <h1><?php the_title() ?></h1>
+                <a href="<?php echo get_permalink(); ?>">
+                    <button class="btn-front-page-second-row">Read More</button>
+                </a>
+            </div>
         </div>
+        
     <?php
     }
 }else{
@@ -41,4 +44,56 @@ if($query_ciekawostki->have_posts()){
 // clear WP_QUERY
 wp_reset_query();
 ?>
+<div class="second-row-grid-righ-side">
+    <div class="second-row-grid-right-side-header"><h2>Category Posts</h2></div>
+    <div class="second-row-grid-right-side-posts-body">
+        POSTY z imgs
+
+
+        <?php
+
+// query to DB grab proper posts only ciekawostki
+
+$args_ciekawostki = array(
+    'post_type'         => 'post',
+    'category_name' => 'gramatyka',
+    'posts_per_page'    => 4
+    // 'post_type'         => 'post',
+    // 'posts_per_page'    => 2
+);
+
+$query_ciekawostki = new WP_Query($args_ciekawostki);
+//$query_ciekaw = new WP_Query( array( 'category_name' => 'ciekawostki' ) );
+?>
+
+<div class="second-row-grid">
+<?php
+if($query_ciekawostki->have_posts()){
+    while($query_ciekawostki->have_posts()){
+        $query_ciekawostki->the_post();
+        ?>
+        <div class="second-row-grid-post-image">
+        <?php
+        if(has_post_thumbnail()){
+            the_post_thumbnail('bigger_post_image');
+        }
+        ?>
+        </div>
+        <div class="second-row-grid-post-title-button">
+            <div class="front-page-row-second-btn-title">
+            <a href="<?php echo get_permalink(); ?>"><h1><?php the_title() ?></h1></a>
+            </div>
+        </div>
+        
+    <?php
+    }
+}else{
+    echo "<h5>Sorry no posts here</h5>";
+}
+// clear WP_QUERY
+wp_reset_query();
+?>
+
+    </div>    
+</div>
 </div>
