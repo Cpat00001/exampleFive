@@ -45,32 +45,26 @@ if($query_ciekawostki->have_posts()){
 wp_reset_query();
 ?>
 <div class="second-row-grid-righ-side">
-    <div class="second-row-grid-right-side-header"><h2>Category Posts</h2></div>
+    <div class="second-row-grid-right-side-header"><h2>Category Posts - Gramatyka</h2></div>
     <div class="second-row-grid-right-side-posts-body">
-        POSTY z imgs
-
-
-        <?php
+<?php
 
 // query to DB grab proper posts only ciekawostki
 
-$args_ciekawostki = array(
+$args_gramatyka = array(
     'post_type'         => 'post',
     'category_name' => 'gramatyka',
-    'posts_per_page'    => 4
-    // 'post_type'         => 'post',
-    // 'posts_per_page'    => 2
+    'posts_per_page'    => 5
 );
 
-$query_ciekawostki = new WP_Query($args_ciekawostki);
-//$query_ciekaw = new WP_Query( array( 'category_name' => 'ciekawostki' ) );
+$query_gramatyka = new WP_Query($args_gramatyka);
 ?>
 
 <div class="second-row-grid">
 <?php
-if($query_ciekawostki->have_posts()){
-    while($query_ciekawostki->have_posts()){
-        $query_ciekawostki->the_post();
+if($query_gramatyka->have_posts()){
+    while($query_gramatyka->have_posts()){
+        $query_gramatyka->the_post();
         ?>
         <div class="second-row-grid-post-image">
         <?php
@@ -79,9 +73,9 @@ if($query_ciekawostki->have_posts()){
         }
         ?>
         </div>
-        <div class="second-row-grid-post-title-button">
+        <div class="second-row-grid-post-title-button-gramatyka">
             <div class="front-page-row-second-btn-title">
-            <a href="<?php echo get_permalink(); ?>"><h1><?php the_title() ?></h1></a>
+            <a href="<?php echo get_permalink(); ?>" id="gramatyka_title_link"><h2><?php the_title() ?></h2></a>
             </div>
         </div>
         

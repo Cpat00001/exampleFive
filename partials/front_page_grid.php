@@ -7,5 +7,5 @@
     <?php get_template_part('partials/frontpage-second-row'); ?>
 </div>
 <div class="body_frontpage_third_row">
-    <h1>third row front page</h1>
+    <?php get_template_part('partials/frontpage-third-row'); ?>
 </div>
