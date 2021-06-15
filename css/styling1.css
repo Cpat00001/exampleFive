@@ -67,7 +67,7 @@
   margin-top: 3%;
   display: grid;
   grid-template-columns: subgrid;
-  grid-template-rows: repeat(3, minmax(200px, auto));
+  /* grid-template-rows: repeat(3, minmax(200px, auto)); */
 }
 /* front-page styling */
 .body_frontpage_first_row {
@@ -243,10 +243,31 @@
   color: white;
   font-size: 2.5vw;
 }
-/* @@@@@@@@@@@@ page styling @@@@@@@@@@@@@@@@@*/
+/* @@@@@@@@@@@@ indywvidual page styling : about me / contact me @@@@@@@@@@@@@@@@@*/
 .body_subgrid_first_row {
-  background-color: rgb(200, 183, 216);
+  /* background-color: rgb(200, 183, 216); */
   grid-column: 1/4;
+  /* border: 1px solid black; */
+  margin-bottom: 1%;
+  padding: 1%;
+}
+.page_body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 2fr;
+}
+.page_title_picture {
+  background-color: gold;
+  grid-column: 1/2;
+}
+.page_title_picture h1 {
+  margin-left: 2%;
+}
+.page_content {
+  grid-column: 2/6;
+  grid-row: 2/3;
+  background-color: grey;
+  padding: 1%;
 }
 .body_subgrid_first_row p,
 li {
@@ -328,6 +349,57 @@ li {
 .body_subgrid_first_row a {
   text-decoration: none;
   color: gold;
+}
+/* blog archive page */
+.blogpost_card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* border: 1px solid rgb(219, 211, 211); */
+  margin-bottom: 10px;
+  padding: 1%;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(219, 211, 211);
+}
+.blogpost_card_right {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: subrgid;
+}
+.blogpost_title_date {
+  grid-column: 1/4;
+  /* background-color: rgb(201, 104, 104); */
+  padding: 1%;
+}
+.blogpost_title_date h5 {
+  font-size: 2.5vw;
+}
+.blogpost_exerpt {
+  grid-column: 1/4;
+  /* background-color: cornflowerblue; */
+  padding: 1%;
+}
+.blogpost_wiecej {
+  grid-column: 1/4;
+  background-color: rgb(233, 234, 238);
+  width: 100%;
+  padding: 0.5%;
+  text-align: center;
+  margin: auto;
+}
+.blogpost_wiecej a {
+  color: black;
+}
+.archive_thumbnail {
+  grid-column: 1/2;
+}
+.pagination {
+  font-size: 16px;
+  color: black;
+  background-color: brown;
+  text-align: center;
+  padding: 1%;
+  margin-bottom: 1%;
 }
 
 /* responsive mobile */
@@ -519,6 +591,28 @@ li {
     color: white;
     font-size: 4.5vw;
     text-align: center;
+  }
+  /* blog post archive */
+  .archive_thumbnail {
+    grid-column: 1/4;
+    margin-bottom: 1%;
+  }
+  .blogpost_card_right {
+    grid-column: 1/4;
+    /* display: grid;
+  grid-template-columns: subrgid; */
+  }
+  .blogpost_title_date h5 {
+    font-size: 5.5vw;
+  }
+  /* individual page contact me / about me */
+  .page_title_picture {
+    grid-column: 1/6;
+  }
+  .page_content {
+    grid-column: 1/6;
+    font-size: 5.5vw;
+    padding: 1%;
   }
 }
 /* small devices -> mobile */
