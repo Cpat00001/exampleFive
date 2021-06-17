@@ -6,7 +6,9 @@
         <div class="body_subgrid_first_row">
             <div class="page_body">
                     <div class="page_title_picture">
-                    <h1><?php echo the_title(); ?></h1>
+                    <div class="page_title_wrapper">
+                        <h1><?php echo the_title(); ?></h1>
+                    </div>
                     <?php 
                         if ( has_post_thumbnail() ) { 
                             the_post_thumbnail( 'post_image' ); 
@@ -21,7 +23,7 @@
                             while(have_posts()){
                                 the_post();
                                 ?>
-                                    <p><?php the_content(); ?></p>
+                                    <?php the_content(); ?>
                                 <?php
                             }
                         }

@@ -25,6 +25,7 @@ function images_size(){
     add_image_size('post_image', 300, 200 , true);
     add_image_size('archive_post_image', 300 , 300 , false);
     add_image_size('bigger_post_image', 400 , 300);
+    add_image_size('single_post_image', 500,500);
 }
 add_action('after_setup_theme','images_size');
 

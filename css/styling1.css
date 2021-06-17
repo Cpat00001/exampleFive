@@ -94,6 +94,10 @@
   margin-top: 5%;
   font-weight: bold;
 }
+.first_row_grid_post_title a {
+  text-decoration: none;
+  color: black;
+}
 .first_row_grid_post_thumbnail img {
   width: 100%;
   height: auto;
@@ -257,17 +261,23 @@
   grid-template-rows: 1fr 2fr;
 }
 .page_title_picture {
-  background-color: gold;
+  /* background-color: gold; */
   grid-column: 1/2;
 }
 .page_title_picture h1 {
   margin-left: 2%;
+}
+.page_title_wrapper {
+  padding: 5%;
+  background-color: gold;
 }
 .page_content {
   grid-column: 2/6;
   grid-row: 2/3;
   background-color: grey;
   padding: 1%;
+  color: gold;
+  font-size: 1.5vw;
 }
 .body_subgrid_first_row p,
 li {
@@ -402,6 +412,28 @@ li {
   margin-bottom: 1%;
 }
 
+/* single / individual post/ page */
+.single_individual {
+  margin-bottom: 1%;
+}
+.single_top_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.single_top_image {
+  grid-column: 1/2;
+  width: 100%;
+  height: auto;
+}
+.single_image_title {
+  grid-column: 2/5;
+  background-color: rgb(233, 234, 238);
+  padding: 1%;
+}
+.single_content {
+  padding: 1%;
+}
+
 /* responsive mobile */
 /* large devices more than 1200px */
 @media (min-width: 1200px) {
@@ -440,6 +472,7 @@ li {
   }
   .menu_items {
     text-align: right;
+    margin-right: 5%;
   }
   /* error page */
   .error_404 {
@@ -515,7 +548,7 @@ li {
   }
 
   .second-row-grid-post-title-button-gramatyka h2 {
-    font-size: 3.5vw;
+    font-size: 5.5vw;
     margin-left: 5%;
   }
   /* @@@@@@@ fron-page third row @@@@@@@@@@  */
@@ -606,12 +639,39 @@ li {
     font-size: 5.5vw;
   }
   /* individual page contact me / about me */
+  .page_title_wrapper {
+    padding: 5%;
+    background-color: gold;
+  }
   .page_title_picture {
     grid-column: 1/6;
   }
+  .page_title_picture img {
+    width: 100%;
+    height: auto;
+  }
   .page_content {
     grid-column: 1/6;
-    font-size: 5.5vw;
+    font-size: 3.5vw;
+    padding: 1%;
+  }
+  .single_top_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .single_top_image {
+    grid-column: 1/5;
+  }
+  .single_top_image img {
+    width: 100%;
+    height: auto;
+  }
+  .single_image_title {
+    grid-column: 1/5;
+    min-height: 200px;
+    padding: 1%;
+  }
+  .single_content {
     padding: 1%;
   }
 }
@@ -630,5 +690,8 @@ li {
   #footer_subgrid_three {
     grid-column: 7/9;
     padding: 10px;
+  }
+  .page_content {
+    font-size: 5.5vw;
   }
 }
