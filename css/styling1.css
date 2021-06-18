@@ -1,4 +1,7 @@
 /* main layout */
+html {
+  scroll-behavior: smooth;
+}
 .wrapper {
   /* background-color: rgb(168, 165, 165); */
   width: 100%;
@@ -173,6 +176,18 @@
   grid-column: 10/14;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+#scrlbtn {
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(53, 51, 52);
+  color: white;
+  position: sticky;
+  bottom: 1%;
+  float: right;
+  margin-right: 3%;
+  z-index: 10;
+  text-align: center;
 }
 
 /*  @@@@@@@@@@@@@@@@ front-page third row @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */

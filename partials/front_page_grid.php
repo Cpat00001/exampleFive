@@ -9,3 +9,7 @@
 <div class="body_frontpage_third_row">
     <?php get_template_part('partials/frontpage-third-row'); ?>
 </div>
+<!-- scrollUp button -->
+<div id="scrlbtn" onclick="totop()">
+W górę
+</div>
