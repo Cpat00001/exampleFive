@@ -2,6 +2,27 @@
 html {
   scroll-behavior: smooth;
 }
+.cookie_msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+  z-index: 11;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+#cookie_ok {
+  width: 150px;
+  padding: 1%;
+  background-color: gold;
+  color: black;
+  margin: 0 auto;
+  opacity: 1;
+}
 .wrapper {
   /* background-color: rgb(168, 165, 165); */
   width: 100%;

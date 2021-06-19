@@ -17,3 +17,11 @@ function scrollFunc(){
 function totop(){
     document.body.scrollTop = 0;
 }
+
+// accept cookies button
+var cookie_btn = document.getElementById("cookie_msg_banner");
+
+function cookie_accepted(){
+    // alert('test_clicked');
+    cookie_btn.style.display = "none";
+}

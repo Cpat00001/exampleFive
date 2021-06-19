@@ -1,4 +1,30 @@
 <?php 
+
+// add cookie check if user visited page in last 14days
+$name = "Visited";
+$value = "you have visited our website within last 14days";
+// $time = time()+(60*60*24*14); tutaj pliki cookie ustawione na 14dni
+// tutaj cookie ustawione na 3minuty dla celow testowych
+$time = time()+(60*3);
+$path = "/";
+setcookie($name , $value , $time, $path);
+// check if cookie isset
+if(!isset($_COOKIE['Visited'])){
+    echo "<h1>Cookie VISITED is set</h1>";
+    // ustaw to cookie w else,kiedy to $cookie['visited'] !isset , jest nie ustaiwone
+    //teraz testuje tutaj,nie musze resetowac cookies za kazdym razem
+    echo "<div class='cookie_msg' id='cookie_msg_banner'>
+            <h5>Używamy Ciasteczek 'Cookie'</h5>
+            <p>Hej, fajnie,że nas odwiedzasz. <br>
+            Dla celów optymalizacji strony,używamy plikow Cookie, korzystajac z tej strony decydujesz
+            się na nasze pliki 'cookie'</p>
+            <div id='cookie_ok' onclick='cookie_accepted()'>Akceptuje</div>
+            </div>";
+}else{
+    echo "<h1>Fajnie,ze nas ponownie odzwiedzasz.</h1>";
+}
+
+
 // add dynamically styling and javascript scrips to page
 function add_theme_scripts(){
     // styling css
@@ -38,8 +64,6 @@ function create_sidebars(){
     ));
 }
 add_action('widgets_init','create_sidebars');
-
-
 
 
 ?>
